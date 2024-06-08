@@ -1,16 +1,16 @@
  
 
- import React ,{useContext, useEffect} from 'react'
-import noteContext from '../context/notes/NotesContext'
+ import React   from 'react'
+// import noteContext from '../context/notes/NotesContext'
  
  const About = () => {
 
 
-  const a  = useContext(noteContext)
-  useEffect(() => {
-    // a.update()
-    //eslint disable next line
-  },[])
+  // const a  = useContext(noteContext)
+  // useEffect(() => {
+  //   // a.update()
+  //   //eslint disable next line
+  // },[])
 
 
    return (

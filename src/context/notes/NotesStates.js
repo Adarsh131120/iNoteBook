@@ -55,6 +55,7 @@ const NoteState = (props) => {
     const json = await response.json();
     const newNotes = notes.filter((note) => note._id !== id);
     setNotes(newNotes);
+    console.log(json)
   };
 
   const editNote = async (id, title, description, tag) => {
@@ -68,6 +69,7 @@ const NoteState = (props) => {
     });
 
     const json = await response.json();
+    console.log(json);
     const newNotes = notes.map((note) => {
       if (note._id === id) {
         return { ...note, title, description, tag };
