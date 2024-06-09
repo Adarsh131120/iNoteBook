@@ -1,17 +1,13 @@
- 
-
 {
   "name": "inotebook-backend",
   "version": "1.0.0",
   "description": "iNotebook-your notes on the cloud",
   "main": "index.js",
-  
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node index.js",
-  "build": "echo \"No build necessary\""
-},
-
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "echo \"No build necessary\""
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -20,11 +16,9 @@
     "express": "^4.19.2",
     "express-validator": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.4.0"
+    "mongoose": "^8.4.1"
   },
-  
   "devDependencies": {
     "nodemon": "^3.1.1"
   }
 }
-
