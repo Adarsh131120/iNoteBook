@@ -9,7 +9,7 @@
 
    return (
      <div>
-       {/* this is about {a.state.name} and he is in class { a.state.class} */}
+      
           this is about
      </div>
    )
