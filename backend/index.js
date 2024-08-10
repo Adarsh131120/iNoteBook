@@ -18,7 +18,7 @@ app.use(express.json())
  app.use('/api/auth',require('./routes/auth'));
  app.use('/api/notes',require('./routes/notes'));
 
-app.get("ping", (req, res) => res.send("Hello"));
+app.get("/ping", (req, res) => res.send("Hello"));
 
 async function main() {
   await connectToMongo();
