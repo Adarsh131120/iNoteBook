@@ -1,0 +1,136 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+ 
+
+
+ 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000; /* pure black */
+  color: #00ff91;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #0f0f0f;
+  border: 1px solid #00ff91;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 15px #00ff91;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #00ff91;
+  text-shadow: 0 0 5px #00ff91;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #00ff91;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #00ff91;
+  border-radius: 8px;
+  background-color: #000;
+  color: #00ff91;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus {
+  box-shadow: 0 0 8px #00ff91;
+  background-color: #000;
+}
+
+.form-input::placeholder {
+  color: #00ff91aa;
+}
+
+.submit-button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00ff91;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #00ff91;
+}
+
+.submit-button:hover:enabled {
+  background-color: #00cc74;
+  box-shadow: 0 0 15px #00ff91, 0 0 25px #00ff91;
+}
+
+.submit-button:disabled {
+  background: #444;
+  color: #888;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(0, 255, 145, 0.3);
+  border-top: 3px solid #00ff91;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .login-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .login-title {
+    font-size: 1.5rem;
+  }
+}

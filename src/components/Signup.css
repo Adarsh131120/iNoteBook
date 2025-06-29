@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000; /* Full dark */
+  color: #14e7ff; /* Neon green */
+}
+
+.signup-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem;
+}
+
+.signup-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 0 20px rgba(37, 119, 141, 0.4);
+  color: #45cbf4;
+}
+
+.signup-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #4addf0;
+}
+
+.signup-form .form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #4addf0;
+}
+
+.signup-form .form-control {
+  background-color: #1f1f1f;
+  border: 1px solid #4addf0;
+  border-radius: 5px;
+  padding: 0.75rem;
+  color: #4addf0;
+  transition: all 0.3s ease;
+}
+
+.signup-form .form-control:focus {
+  background-color: #262626;
+  border-color: #4addf0;
+  outline: none;
+  box-shadow: 0 0 5px #3eb7df;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #00ff99, #29b3c5);
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 5px;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.signup-btn:hover:enabled {
+  background: linear-gradient(135deg, #3ca0ce, #317ead);
+  box-shadow: 0 0 10px #52b2e2;
+}
+
+.signup-btn:disabled {
+  background-color: #444;
+  color: #888;
+  cursor: not-allowed;
+}

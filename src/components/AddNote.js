@@ -1,5 +1,7 @@
+
 import { useContext, useState } from 'react';
 import noteContext from '../context/notes/NotesContext';
+import './AddNote.css';
 
 const AddNote = (props) => {
   const context = useContext(noteContext);
@@ -9,10 +11,8 @@ const AddNote = (props) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log('Form submitted with note:', note);
     addNote(note.title, note.description, note.tag);
     props.showAlert("Note added successfully", "success");
-    // Optionally reset the form
     setNote({ title: '', description: '', tag: '' });
   };
 
@@ -21,14 +21,14 @@ const AddNote = (props) => {
   };
 
   return (
-    <div className="container my-3">
-      <h2>Add a note</h2>
-      <form className='my-3' onSubmit={handleClick}>
-        <div className="mb-3">
+    <div className="addnote-container">
+      <h2 className="addnote-title">Add a New Note</h2>
+      <form className="addnote-form" onSubmit={handleClick}>
+        <div className="input-group">
           <label htmlFor="title" className="form-label">Title</label>
           <input
             type="text"
-            className="form-control"
+            className="form-input"
             id="title"
             name="title"
             value={note.title}
@@ -37,11 +37,12 @@ const AddNote = (props) => {
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="input-group">
           <label htmlFor="description" className="form-label">Description</label>
           <input
             type="text"
-            className="form-control"
+            className="form-input"
+            id="description"
             name="description"
             value={note.description}
             onChange={onChange}
@@ -49,11 +50,11 @@ const AddNote = (props) => {
             required
           />
         </div>
-        <div className="mb-3">
+        <div className="input-group">
           <label htmlFor="tag" className="form-label">Tag</label>
           <input
             type="text"
-            className="form-control"
+            className="form-input"
             id="tag"
             name="tag"
             value={note.tag}
@@ -65,13 +66,13 @@ const AddNote = (props) => {
         <button
           disabled={note.title.length < 5 || note.description.length < 5}
           type="submit"
-          className="btn btn-primary"
+          className="addnote-button"
         >
           Add Note
         </button>
       </form>
     </div>
   );
-}
+};
 
 export default AddNote;
